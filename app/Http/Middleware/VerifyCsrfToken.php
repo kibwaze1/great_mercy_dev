@@ -15,3 +15,5 @@ class VerifyCsrfToken extends Middleware
         '/mpesa/stk-push-callback',   // Allow M-Pesa callback without CSRF token
     ];
 }
+
+

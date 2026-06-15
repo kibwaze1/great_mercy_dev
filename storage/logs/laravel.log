@@ -973,3 +973,75 @@ Content-Transfer-Encoding: quoted-printable
 #35 C:/Users/PC/great-mercy/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
 #36 {main}
 "} 
+[2026-06-15 10:13:31] local.DEBUG: From: ${GREAT MERCY SCHOOL} <KIBWAZE3@GMAIL.COM>
+To: kibwaze3@gmail.com
+Subject: New School Application Submitted
+MIME-Version: 1.0
+Date: Mon, 15 Jun 2026 10:13:31 +0000
+Message-ID: <226f50f8e7267400cdd034ad1187bd66@GMAIL.COM>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head><title>New Application</title></head>
+<body>
+    <h2>New Application from George Kibwaze</h2>
+    <p><strong>Parent/Guardian:</strong> Emmanuel</p>
+    <p><strong>Phone:</strong> 0799692224</p>
+    <p><strong>Email:</strong> georgekibwaze1@gmail.com</p>
+    <p><strong>Grade Applied:</strong> Form 4</p>
+    <p><strong>Additional Message:</strong> N/A</p>
+    <hr>
+    <p>View all applications in the admin dashboard.</p>
+</body>
+</html>
+  
+[2026-06-15 10:13:32] local.DEBUG: From: ${GREAT MERCY SCHOOL} <KIBWAZE3@GMAIL.COM>
+To: kibwaze3@gmail.com
+Subject: New School Application Submitted
+MIME-Version: 1.0
+Date: Mon, 15 Jun 2026 10:13:32 +0000
+Message-ID: <ea770a8da755bb2b3e545f6b5ed19aa1@GMAIL.COM>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head><title>New Application</title></head>
+<body>
+    <h2>New Application from George Kibwaze</h2>
+    <p><strong>Parent/Guardian:</strong> Emmanuel</p>
+    <p><strong>Phone:</strong> 0799692224</p>
+    <p><strong>Email:</strong> georgekibwaze1@gmail.com</p>
+    <p><strong>Grade Applied:</strong> Form 4</p>
+    <p><strong>Additional Message:</strong> N/A</p>
+    <hr>
+    <p>View all applications in the admin dashboard.</p>
+</body>
+</html>
+  
+[2026-06-15 10:13:34] local.DEBUG: From: ${GREAT MERCY SCHOOL} <KIBWAZE3@GMAIL.COM>
+To: kibwaze3@gmail.com
+Subject: New School Application Submitted
+MIME-Version: 1.0
+Date: Mon, 15 Jun 2026 10:13:34 +0000
+Message-ID: <64a539facc4f4514e7207a3c1488c423@GMAIL.COM>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head><title>New Application</title></head>
+<body>
+    <h2>New Application from George Kibwaze</h2>
+    <p><strong>Parent/Guardian:</strong> Emmanuel</p>
+    <p><strong>Phone:</strong> 0799692224</p>
+    <p><strong>Email:</strong> georgekibwaze1@gmail.com</p>
+    <p><strong>Grade Applied:</strong> Form 4</p>
+    <p><strong>Additional Message:</strong> N/A</p>
+    <hr>
+    <p>View all applications in the admin dashboard.</p>
+</body>
+</html>
+  
