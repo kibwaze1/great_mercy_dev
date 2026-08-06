@@ -25,7 +25,7 @@ class PaymentCallbackController extends Controller
 
         if ($application) {
             if ($resultCode == 0) {
-                // Payment success – extract transaction ID
+                // Payment success - extract transaction ID
                 $transactionId = null;
                 if (isset($callbackData['CallbackMetadata']['Item'])) {
                     foreach ($callbackData['CallbackMetadata']['Item'] as $item) {
@@ -37,13 +37,14 @@ class PaymentCallbackController extends Controller
                 }
                 $application->update([
                     'mpesa_transaction_id' => $transactionId,
-                    'payment_status'       => 'paid',
-                    'payment_error'        => null,
+                    'payment_status' => 'paid',
+                    'payment_error' => null,
+                    'status' => 'approved', // AUTO-APPROVE when payment is successful
                 ]);
             } else {
                 $application->update([
                     'payment_status' => 'failed',
-                    'payment_error'  => $resultDesc,
+                    'payment_error' => $resultDesc,
                 ]);
             }
         }

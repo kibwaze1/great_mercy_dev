@@ -33,6 +33,8 @@ class Application extends Model
         'mpesa_transaction_id',  // receipt number after successful payment
         'payment_status',        // pending, paid, failed
         'payment_error',         // error message if payment failed
+        // Application status
+        'status',                // pending, approved, rejected
     ];
 
     /**
@@ -70,10 +72,42 @@ class Application extends Model
     }
 
     /**
+     * Check if application is approved.
+     */
+    public function isApproved()
+    {
+        return $this->status === 'approved';
+    }
+
+    /**
      * Scope for pending payments.
      */
     public function scopePendingPayment($query)
     {
         return $query->where('payment_status', 'pending');
+    }
+
+    /**
+     * Scope for pending approval.
+     */
+    public function scopePendingApproval($query)
+    {
+        return $query->where('status', 'pending');
+    }
+
+    /**
+     * Scope for approved applications.
+     */
+    public function scopeApproved($query)
+    {
+        return $query->where('status', 'approved');
+    }
+
+    /**
+     * Scope for rejected applications.
+     */
+    public function scopeRejected($query)
+    {
+        return $query->where('status', 'rejected');
     }
 }

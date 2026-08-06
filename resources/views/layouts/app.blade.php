@@ -18,17 +18,17 @@
         <div class="topbar-right"></div>
     </div>
 
-    <!-- Navbar (logo removed) -->
+    <!-- Navbar -->
     <nav>
         <div class="hamburger" id="hamburger">
             <i class="fas fa-bars"></i>
         </div>
         <ul id="navMenu">
             <li><a href="{{ route('home') }}">Home</a></li>
-            <li><a href="{{ route('school.home') }}">School</a></li>
-            <li><a href="{{ route('orphanage.home') }}">Orphanage</a></li>
-            <li><a href="{{ route('clinic.home') }}">Clinic</a></li>
-            <li><a href="{{ route('chapel.home') }}">Chapel</a></li>
+            <li><a href="{{ route('school.home') }}" target="_blank" rel="noopener noreferrer">School</a></li>
+            <li><a href="{{ route('orphanage.home') }}" target="_blank" rel="noopener noreferrer">Orphanage</a></li>
+            <li><a href="{{ route('clinic.home') }}" target="_blank" rel="noopener noreferrer">Clinic</a></li>
+            <li><a href="{{ route('chapel.home') }}" target="_blank" rel="noopener noreferrer">Chapel</a></li>
             <li><a href="{{ route('enquire') }}">Enquire</a></li>
         </ul>
         <div class="nav-right">

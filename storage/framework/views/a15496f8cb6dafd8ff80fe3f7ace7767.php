@@ -151,10 +151,10 @@
             color: #F5DD00;
         }
         .hamburger-school {
-            display: none; /* hidden on desktop */
+            display: none;
         }
 
-        /* Mobile menu – hidden on desktop */
+        /* Mobile menu */
         .mobile-menu {
             display: none;
             background: #002D62;
@@ -224,29 +224,53 @@
             font-weight: 600;
             cursor: pointer;
         }
+
+        /* Footer */
         .school-footer {
             background: #001B3A;
             color: #cbd5e1;
             text-align: center;
-            padding: 0.8rem;
+            padding: 1.2rem;
             font-size: 0.7rem;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #F5DD00;
         }
 
         /* ========== MOBILE STYLES (max-width: 768px) ========== */
         @media (max-width: 768px) {
-            /* Hide white top navbar completely */
             .top-navbar-white {
                 display: none;
             }
-            /* Hide centered nav links in blue navbar */
             .nav-links {
                 display: none;
             }
-            /* Show hamburger */
             .hamburger-school {
                 display: block;
             }
-            /* Adjust right-actions order */
             .right-actions {
                 gap: 0.8rem;
             }
@@ -261,13 +285,11 @@
                 font-size: 0.7rem;
                 padding: 0.3rem 0.8rem;
             }
-            /* Blue navbar becomes column wrap for logo & actions */
             .main-navbar-blue {
                 flex-wrap: wrap;
                 justify-content: space-between;
                 padding: 0.4rem 4%;
             }
-            /* Mobile menu styling */
             .mobile-menu.show {
                 display: flex;
             }
@@ -277,6 +299,21 @@
             }
             .page h2 {
                 font-size: 1.3rem;
+            }
+            .footer-links {
+                gap: 1rem;
+            }
+            .footer-links a {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .footer-links {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.8rem;
             }
         }
     </style>
@@ -291,9 +328,10 @@
         </div>
         <div class="right-group">
             <div class="links-right">
-                <a href="#">Alumni</a>
-                <a href="#">Students</a>
-                <a href="#">Staff & Faculty</a>
+                <!-- UPDATED: Added target="_blank" to open in new tab -->
+                <a href="<?php echo e(route('alumni.index')); ?>" target="_blank">Alumni</a>
+                <a href="<?php echo e(route('school.students')); ?>">Students</a>
+                <a href="<?php echo e(route('school.staff')); ?>">Staff & Faculty</a>
                 <a href="#">Quicklinks</a>
             </div>
             <span class="separator">|</span>
@@ -312,34 +350,31 @@
             <img src="<?php echo e(asset('logo.png')); ?>" alt="School Logo">
         </div>
         <div class="nav-links" id="desktopNavLinks">
-            <a href="<?php echo e(route('home')); ?>" class="<?php echo $__env->yieldContent('nav-home'); ?>">Home</a>
+            <a href="<?php echo e(route('school.home')); ?>" class="<?php echo $__env->yieldContent('nav-home'); ?>">Home</a>
             <a href="<?php echo e(route('school.academics')); ?>" class="<?php echo $__env->yieldContent('nav-academics'); ?>">Academics</a>
             <a href="<?php echo e(route('school.admission')); ?>" class="<?php echo $__env->yieldContent('nav-admission'); ?>">Admission & Fees</a>
             <a href="<?php echo e(route('school.about')); ?>" class="<?php echo $__env->yieldContent('nav-about'); ?>">About Us</a>
             <a href="<?php echo e(route('school.contact')); ?>" class="<?php echo $__env->yieldContent('nav-contact'); ?>">Contact</a>
         </div>
         <div class="right-actions">
-
             <a href="<?php echo e(route('school.apply')); ?>" class="apply-btn">Apply Now</a>
             <button class="hamburger-school" id="schoolHamburger"><i class="fas fa-bars"></i></button>
             <button class="search-icon" id="searchBtn"><i class="fas fa-search"></i></button>
         </div>
     </div>
 
-    <!-- Mobile menu – hidden by default, toggled by hamburger -->
+    <!-- Mobile menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <!-- Links from white navbar -->
-        <a href="#">Alumni</a>
-        <a href="#">Students</a>
-        <a href="#">Staff & Faculty</a>
+        <!-- UPDATED: Added target="_blank" to open in new tab -->
+        <a href="<?php echo e(route('alumni.index')); ?>" target="_blank">Alumni</a>
+        <a href="<?php echo e(route('school.students')); ?>">Students</a>
+        <a href="<?php echo e(route('school.staff')); ?>">Staff & Faculty</a>
         <a href="#">Quicklinks</a>
-        <!-- Links from blue navbar -->
-        <a href="<?php echo e(route('home')); ?>">Home</a>
+        <a href="<?php echo e(route('school.home')); ?>">Home</a>
         <a href="<?php echo e(route('school.academics')); ?>">Academics</a>
         <a href="<?php echo e(route('school.admission')); ?>">Admission & Fees</a>
         <a href="<?php echo e(route('school.about')); ?>">About Us</a>
         <a href="<?php echo e(route('school.contact')); ?>">Contact</a>
-        <!-- Additional contact info & social icons (optional, for better UX) -->
         <a href="tel:+254727791668"><i class="fas fa-phone-alt"></i> +254 727791668</a>
         <a href="mailto:school@greatmercy.org"><i class="fas fa-envelope"></i> school@greatmercy.org</a>
         <div style="padding: 0.8rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
@@ -356,9 +391,18 @@
         <?php echo $__env->yieldContent('content'); ?>
     </div>
 
-    <div class="school-footer">
-        <p>&copy; 2026 Great Mercy School. All rights reserved.</p>
-    </div>
+    <!-- Footer with Quick Links: Main Page, Orphanage, School, Clinic -->
+    <footer class="school-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="<?php echo e(route('home')); ?>">Main Page</a>
+                <a href="<?php echo e(route('orphanage.home')); ?>">Orphanage</a>
+                <a href="<?php echo e(route('school.home')); ?>">School</a>
+                <a href="<?php echo e(route('clinic.home')); ?>">Clinic</a>
+            </div>
+            <p>&copy; 2026 Great Mercy School. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script>
         const hamburger = document.getElementById('schoolHamburger');

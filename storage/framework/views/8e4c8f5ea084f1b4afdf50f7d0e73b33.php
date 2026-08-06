@@ -18,17 +18,17 @@
         <div class="topbar-right"></div>
     </div>
 
-    <!-- Navbar (logo removed) -->
+    <!-- Navbar -->
     <nav>
         <div class="hamburger" id="hamburger">
             <i class="fas fa-bars"></i>
         </div>
         <ul id="navMenu">
             <li><a href="<?php echo e(route('home')); ?>">Home</a></li>
-            <li><a href="<?php echo e(route('school.home')); ?>">School</a></li>
-            <li><a href="<?php echo e(route('orphanage.home')); ?>">Orphanage</a></li>
-            <li><a href="<?php echo e(route('clinic.home')); ?>">Clinic</a></li>
-            <li><a href="<?php echo e(route('chapel.home')); ?>">Chapel</a></li>
+            <li><a href="<?php echo e(route('school.home')); ?>" target="_blank" rel="noopener noreferrer">School</a></li>
+            <li><a href="<?php echo e(route('orphanage.home')); ?>" target="_blank" rel="noopener noreferrer">Orphanage</a></li>
+            <li><a href="<?php echo e(route('clinic.home')); ?>" target="_blank" rel="noopener noreferrer">Clinic</a></li>
+            <li><a href="<?php echo e(route('chapel.home')); ?>" target="_blank" rel="noopener noreferrer">Chapel</a></li>
             <li><a href="<?php echo e(route('enquire')); ?>">Enquire</a></li>
         </ul>
         <div class="nav-right">
